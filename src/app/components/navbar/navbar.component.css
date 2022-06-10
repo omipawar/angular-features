@@ -1,0 +1,14 @@
+.log{
+  position: absolute;
+  right: 15%;
+  top: 30%;
+}
+
+@media(max-width: 670px){
+  .log{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+  }
+
+}
