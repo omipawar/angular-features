@@ -8,13 +8,15 @@ import { LoaderService } from './loader.service';
 })
 export class InterceptorService implements HttpInterceptor {
 
-  constructor( private loader: LoaderService) { }
+  constructor(private loader: LoaderService) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.loader.isloading.next(true);
+    // console.log(req.url);
+
 
     return next.handle(req).pipe(
       finalize(
-        ()=>{
+        () => {
           this.loader.isloading.next(false);
         }
       )

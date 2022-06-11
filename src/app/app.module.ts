@@ -12,6 +12,11 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { InterceptorService } from './shared/interceptor.service';
+import { VirtualComponent } from './components/virtual/virtual.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderService } from './shared/loader.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,8 @@ import { InterceptorService } from './shared/interceptor.service';
     LoginComponent,
     DashboardComponent,
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    VirtualComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import { InterceptorService } from './shared/interceptor.service';
     ReactiveFormsModule,
     HttpClientModule,
     NgxSkeletonLoaderModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    InfiniteScrollModule,
+    BrowserAnimationsModule,
+    ScrollingModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

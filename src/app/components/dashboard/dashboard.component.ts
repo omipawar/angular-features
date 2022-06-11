@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
       this.products = data;
       this.num = data.length;
 
-      console.log(this.products);
+      // console.log(this.products);
       this.loader = false;
 
     });
